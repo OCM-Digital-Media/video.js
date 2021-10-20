@@ -18,7 +18,7 @@ class Spacer extends Component {
   *         The DOM `className` for this object.
   */
   buildCSSClass() {
-    return `vjs-spacer ${super.buildCSSClass()}`;
+    return `ovp-spacer ${super.buildCSSClass()}`;
   }
 
   /**

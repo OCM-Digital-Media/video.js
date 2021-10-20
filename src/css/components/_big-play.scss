@@ -1,6 +1,6 @@
 @use "sass:math";
 
-.video-js .vjs-big-play-button {
+.ovp .ovp-big-play-button {
   font-size: 3em;
   line-height: $big-play-button--line-height;
   height: $big-play-button--height;
@@ -19,25 +19,25 @@
   @include border-radius(0.3em);
   @include transition(all 0.4s);
 
-  // Since the big play button doesn't inherit from vjs-control, we need to specify a bit more than
+  // Since the big play button doesn't inherit from ovp-control, we need to specify a bit more than
   // other buttons for the icon.
-  & .vjs-icon-placeholder:before {
-    @extend .vjs-icon-play;
+  & .ovp-icon-placeholder:before {
+    @extend .ovp-icon-play;
 
     @extend %icon-default;
   }
 }
 
 // Allow people that hate their poster image to center the big play button.
-.vjs-big-play-centered .vjs-big-play-button {
+.ovp-big-play-centered .ovp-big-play-button {
   top: 50%;
   left: 50%;
   margin-top: -(math.div($big-play-button--height, 2));
   margin-left: -(math.div($big-play-button--width, 2));
 }
 
-.video-js:hover .vjs-big-play-button,
-.video-js .vjs-big-play-button:focus {
+.ovp:hover .ovp-big-play-button,
+.ovp .ovp-big-play-button:focus {
   border-color: $primary-foreground-color;
 
   @include background-color-with-alpha($secondary-background-color, $secondary-background-transparency);
@@ -45,14 +45,14 @@
 }
 
 // Hide if controls are disabled, the video is playing, or native controls are used.
-.vjs-controls-disabled .vjs-big-play-button,
-.vjs-has-started .vjs-big-play-button,
-.vjs-using-native-controls .vjs-big-play-button,
-.vjs-error .vjs-big-play-button {
+.ovp-controls-disabled .ovp-big-play-button,
+.ovp-has-started .ovp-big-play-button,
+.ovp-using-native-controls .ovp-big-play-button,
+.ovp-error .ovp-big-play-button {
   display: none;
 }
 
-// Show big play button if video is paused and .vjs-show-big-play-button-on-pause is set on video element
-.vjs-has-started.vjs-paused.vjs-show-big-play-button-on-pause .vjs-big-play-button {
+// Show big play button if video is paused and .ovp-show-big-play-button-on-pause is set on video element
+.ovp-has-started.ovp-paused.ovp-show-big-play-button-on-pause .ovp-big-play-button {
   display: block;
 }

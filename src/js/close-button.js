@@ -34,7 +34,7 @@ class CloseButton extends Button {
   *         The DOM `className` for this object.
   */
   buildCSSClass() {
-    return `vjs-close-button ${super.buildCSSClass()}`;
+    return `ovp-close-button ${super.buildCSSClass()}`;
   }
 
   /**

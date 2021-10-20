@@ -1,12 +1,12 @@
 // css for the old live ui, assumes that the progress bar is hidden
-.video-js .vjs-live-control {
+.ovp .ovp-live-control {
   @include display-flex(flex-start);
   @include flex(auto);
   font-size: 1em;
   line-height: 3em;
 }
 
-.vjs-no-flex .vjs-live-control {
+.ovp-no-flex .ovp-live-control {
   display: table-cell;
   width: auto;
   text-align: left;
@@ -14,13 +14,13 @@
 
 // hide the LiveDisplay when not live or when
 // the new liveui is in use
-.video-js:not(.vjs-live) .vjs-live-control,
-.video-js.vjs-liveui .vjs-live-control {
+.ovp:not(.ovp-live) .ovp-live-control,
+.ovp.ovp-liveui .ovp-live-control {
   display: none;
 }
 
 // css for the new live ui below
-.video-js .vjs-seek-to-live-control {
+.ovp .ovp-seek-to-live-control {
   align-items: center;
   cursor: pointer;
   @include flex(none);
@@ -34,7 +34,7 @@
   min-width: 4em;
 }
 
-.vjs-no-flex .vjs-seek-to-live-control {
+.ovp-no-flex .ovp-seek-to-live-control {
   display: table-cell;
   width: auto;
   text-align: left;
@@ -42,23 +42,23 @@
 
 // hide the SeekToLive button when not live and
 // when the liveui is not in use
-.video-js.vjs-live:not(.vjs-liveui) .vjs-seek-to-live-control,
-.video-js:not(.vjs-live) .vjs-seek-to-live-control {
+.ovp.ovp-live:not(.ovp-liveui) .ovp-seek-to-live-control,
+.ovp:not(.ovp-live) .ovp-seek-to-live-control {
   display: none;
 }
 
 // only show as a pointer when we will seek to live edge
-.vjs-seek-to-live-control.vjs-control.vjs-at-live-edge {
+.ovp-seek-to-live-control.ovp-control.ovp-at-live-edge {
   cursor: auto;
 }
 
-.vjs-seek-to-live-control .vjs-icon-placeholder {
+.ovp-seek-to-live-control .ovp-icon-placeholder {
   margin-right: 0.5em;
-  @extend .vjs-icon-circle;
+  @extend .ovp-icon-circle;
   color: #888;
 }
 
 // make the live circle red when at the live edge
-.vjs-seek-to-live-control.vjs-control.vjs-at-live-edge .vjs-icon-placeholder {
+.ovp-seek-to-live-control.ovp-control.ovp-at-live-edge .ovp-icon-placeholder {
   color: red;
 }

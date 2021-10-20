@@ -1,4 +1,4 @@
-.vjs-poster {
+.ovp-poster {
   display: inline-block;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -17,16 +17,16 @@
 }
 
 // Hide the poster after the video has started playing
-.vjs-has-started .vjs-poster {
+.ovp-has-started .ovp-poster {
   display: none;
 }
 
 // Don't hide the poster if we're playing audio
-.vjs-audio.vjs-has-started .vjs-poster {
+.ovp-audio.ovp-has-started .ovp-poster {
   display: block;
 }
 
 // Hide the poster when native controls are used otherwise it covers them
-.vjs-using-native-controls .vjs-poster {
+.ovp-using-native-controls .ovp-poster {
   display: none;
 }

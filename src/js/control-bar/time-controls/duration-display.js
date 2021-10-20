@@ -48,7 +48,7 @@ class DurationDisplay extends TimeDisplay {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return 'vjs-duration';
+    return 'ovp-duration';
   }
 
   /**

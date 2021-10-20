@@ -32,7 +32,7 @@ class AudioTrackMenuItem extends MenuItem {
 
     this.track = track;
 
-    this.addClass(`vjs-${track.kind}-menu-item`);
+    this.addClass(`ovp-${track.kind}-menu-item`);
 
     const changeHandler = (...args) => {
       this.handleTracksChange.apply(this, args);
@@ -46,16 +46,16 @@ class AudioTrackMenuItem extends MenuItem {
 
   createEl(type, props, attrs) {
     const el = super.createEl(type, props, attrs);
-    const parentSpan = el.querySelector('.vjs-menu-item-text');
+    const parentSpan = el.querySelector('.ovp-menu-item-text');
 
     if (this.options_.track.kind === 'main-desc') {
       parentSpan.appendChild(super.createEl('span', {
-        className: 'vjs-icon-placeholder'
+        className: 'ovp-icon-placeholder'
       }, {
         'aria-hidden': true
       }));
       parentSpan.appendChild(super.createEl('span', {
-        className: 'vjs-control-text',
+        className: 'ovp-control-text',
         textContent: this.localize('Descriptions')
       }));
     }

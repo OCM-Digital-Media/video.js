@@ -48,7 +48,7 @@ class PosterImage extends ClickableComponent {
    */
   createEl() {
     const el = Dom.createEl('div', {
-      className: 'vjs-poster',
+      className: 'ovp-poster',
 
       // Don't want poster to be tabbable.
       tabIndex: -1

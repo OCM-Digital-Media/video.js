@@ -39,7 +39,7 @@ class MenuButton extends Component {
     const buttonClass = Button.prototype.buildCSSClass();
 
     this.menuButton_.el_.className = this.buildCSSClass() + ' ' + buttonClass;
-    this.menuButton_.removeClass('vjs-control');
+    this.menuButton_.removeClass('ovp-control');
 
     this.addChild(this.menuButton_);
 
@@ -55,7 +55,7 @@ class MenuButton extends Component {
     this.on(this.menuButton_, 'click', handleClick);
     this.on(this.menuButton_, 'keydown', (e) => this.handleKeyDown(e));
     this.on(this.menuButton_, 'mouseenter', () => {
-      this.addClass('vjs-hover');
+      this.addClass('ovp-hover');
       this.menu.show();
       Events.on(document, 'keyup', this.handleMenuKeyUp_);
     });
@@ -115,7 +115,7 @@ class MenuButton extends Component {
     // Add a title list item to the top
     if (this.options_.title) {
       const titleEl = Dom.createEl('li', {
-        className: 'vjs-menu-title',
+        className: 'ovp-menu-title',
         textContent: toTitleCase(this.options_.title),
         tabIndex: -1
       });
@@ -164,7 +164,7 @@ class MenuButton extends Component {
    *         The constructed wrapper DOM `className`
    */
   buildWrapperCSSClass() {
-    let menuButtonClass = 'vjs-menu-button';
+    let menuButtonClass = 'ovp-menu-button';
 
     // If the inline option is passed, we want to use different styles altogether.
     if (this.options_.inline === true) {
@@ -176,7 +176,7 @@ class MenuButton extends Component {
     // TODO: Fix the CSS so that this isn't necessary
     const buttonClass = Button.prototype.buildCSSClass();
 
-    return `vjs-menu-button ${menuButtonClass} ${buttonClass} ${super.buildCSSClass()}`;
+    return `ovp-menu-button ${menuButtonClass} ${buttonClass} ${super.buildCSSClass()}`;
   }
 
   /**
@@ -186,7 +186,7 @@ class MenuButton extends Component {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    let menuButtonClass = 'vjs-menu-button';
+    let menuButtonClass = 'ovp-menu-button';
 
     // If the inline option is passed, we want to use different styles altogether.
     if (this.options_.inline === true) {
@@ -195,7 +195,7 @@ class MenuButton extends Component {
       menuButtonClass += '-popup';
     }
 
-    return `vjs-menu-button ${menuButtonClass} ${super.buildCSSClass()}`;
+    return `ovp-menu-button ${menuButtonClass} ${super.buildCSSClass()}`;
   }
 
   /**
@@ -252,7 +252,7 @@ class MenuButton extends Component {
    * @listens mouseleave
    */
   handleMouseLeave(event) {
-    this.removeClass('vjs-hover');
+    this.removeClass('ovp-hover');
     Events.off(document, 'keyup', this.handleMenuKeyUp_);
   }
 
@@ -314,7 +314,7 @@ class MenuButton extends Component {
   handleMenuKeyUp(event) {
     // Escape hides popup menu
     if (keycode.isEventKey(event, 'Esc') || keycode.isEventKey(event, 'Tab')) {
-      this.removeClass('vjs-hover');
+      this.removeClass('ovp-hover');
     }
   }
 
@@ -399,7 +399,7 @@ class MenuButton extends Component {
     this.unpressButton();
 
     this.enabled_ = false;
-    this.addClass('vjs-disabled');
+    this.addClass('ovp-disabled');
 
     this.menuButton_.disable();
   }
@@ -409,7 +409,7 @@ class MenuButton extends Component {
    */
   enable() {
     this.enabled_ = true;
-    this.removeClass('vjs-disabled');
+    this.removeClass('ovp-disabled');
 
     this.menuButton_.enable();
   }

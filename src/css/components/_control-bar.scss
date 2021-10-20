@@ -1,4 +1,4 @@
-.video-js .vjs-control-bar {
+.ovp .ovp-control-bar {
   display: none;
   width: 100%;
   position: absolute;
@@ -11,7 +11,7 @@
 }
 
 // Video has started playing
-.vjs-has-started .vjs-control-bar {
+.ovp-has-started .ovp-control-bar {
   @include display-flex;
   visibility: visible;
   opacity: 1;
@@ -21,11 +21,11 @@
 }
 
 // Video has started playing AND user is inactive
-.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+.ovp-has-started.ovp-user-inactive.ovp-playing .ovp-control-bar {
   // Remain visible for screen reader and keyboard users
   visibility: visible;
   opacity: 0;
-  // prevent a click/tap from interacting with vjs-lock-showing menu's
+  // prevent a click/tap from interacting with ovp-lock-showing menu's
   // or other controls while we are inactive/hidden
   pointer-events: none;
 
@@ -34,20 +34,20 @@
 
 }
 
-.vjs-controls-disabled .vjs-control-bar,
-.vjs-using-native-controls .vjs-control-bar,
-.vjs-error .vjs-control-bar {
+.ovp-controls-disabled .ovp-control-bar,
+.ovp-using-native-controls .ovp-control-bar,
+.ovp-error .ovp-control-bar {
   // !important is ok in this context.
   display: none !important;
 }
 
 // Don't hide the control bar if it's audio
-.vjs-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+.ovp-audio.ovp-has-started.ovp-user-inactive.ovp-playing .ovp-control-bar {
   opacity: 1;
   visibility: visible;
 }
 
 // no flex support
-.vjs-has-started.vjs-no-flex .vjs-control-bar {
+.ovp-has-started.ovp-no-flex .ovp-control-bar {
   display: table;
 }

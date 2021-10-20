@@ -38,17 +38,17 @@ class LiveDisplay extends Component {
    */
   createEl() {
     const el = super.createEl('div', {
-      className: 'vjs-live-control vjs-control'
+      className: 'ovp-live-control ovp-control'
     });
 
     this.contentEl_ = Dom.createEl('div', {
-      className: 'vjs-live-display'
+      className: 'ovp-live-display'
     }, {
       'aria-live': 'off'
     });
 
     this.contentEl_.appendChild(Dom.createEl('span', {
-      className: 'vjs-control-text',
+      className: 'ovp-control-text',
       textContent: `${this.localize('Stream Type')}\u00a0`
     }));
     this.contentEl_.appendChild(document.createTextNode(this.localize('LIVE')));

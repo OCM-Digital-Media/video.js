@@ -34,11 +34,11 @@ class AudioTrackButton extends TrackButton {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-audio-button ${super.buildCSSClass()}`;
+    return `ovp-audio-button ${super.buildCSSClass()}`;
   }
 
   buildWrapperCSSClass() {
-    return `vjs-audio-button ${super.buildWrapperCSSClass()}`;
+    return `ovp-audio-button ${super.buildWrapperCSSClass()}`;
   }
 
   /**

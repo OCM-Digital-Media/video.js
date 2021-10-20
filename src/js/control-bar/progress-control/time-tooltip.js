@@ -35,7 +35,7 @@ class TimeTooltip extends Component {
    */
   createEl() {
     return super.createEl('div', {
-      className: 'vjs-time-tooltip'
+      className: 'ovp-time-tooltip'
     }, {
       'aria-hidden': 'true'
     });

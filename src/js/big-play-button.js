@@ -25,10 +25,10 @@ class BigPlayButton extends Button {
    * Builds the default DOM `className`.
    *
    * @return {string}
-   *         The DOM `className` for this object. Always returns 'vjs-big-play-button'.
+   *         The DOM `className` for this object. Always returns 'ovp-big-play-button'.
    */
   buildCSSClass() {
-    return 'vjs-big-play-button';
+    return 'ovp-big-play-button';
   }
 
   /**

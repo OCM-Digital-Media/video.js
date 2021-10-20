@@ -18,40 +18,40 @@
 // - Volume Mute button
 // - Fullscreen Button
 //
-.video-js {
+.ovp {
 
-  &.vjs-layout-small,
-  &.vjs-layout-x-small,
-  &.vjs-layout-tiny {
-    .vjs-current-time,
-    .vjs-time-divider,
-    .vjs-duration,
-    .vjs-remaining-time,
-    .vjs-playback-rate,
-    .vjs-chapters-button,
-    .vjs-descriptions-button,
-    .vjs-captions-button,
-    .vjs-subtitles-button,
-    .vjs-audio-button,
-    .vjs-volume-control {
+  &.ovp-layout-small,
+  &.ovp-layout-x-small,
+  &.ovp-layout-tiny {
+    .ovp-current-time,
+    .ovp-time-divider,
+    .ovp-duration,
+    .ovp-remaining-time,
+    .ovp-playback-rate,
+    .ovp-chapters-button,
+    .ovp-descriptions-button,
+    .ovp-captions-button,
+    .ovp-subtitles-button,
+    .ovp-audio-button,
+    .ovp-volume-control {
       display: none;
     }
 
     // Reset the size of the volume panel to the default so we don't see a big
     // empty space to the right of the mute button.
-    .vjs-volume-panel.vjs-volume-panel-horizontal:hover,
-    .vjs-volume-panel.vjs-volume-panel-horizontal:active,
-    .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
+    .ovp-volume-panel.ovp-volume-panel-horizontal:hover,
+    .ovp-volume-panel.ovp-volume-panel-horizontal:active,
+    .ovp-volume-panel.ovp-volume-panel-horizontal.ovp-slider-active {
       width: auto;
       width: initial;
     }
   }
 
   // Hide the subs-caps button for non-Live UI "x-small" and for "tiny" players.
-  &.vjs-layout-x-small:not(.vjs-liveui),
-  &.vjs-layout-x-small:not(.vjs-live),
-  &.vjs-layout-tiny {
-    .vjs-subs-caps-button {
+  &.ovp-layout-x-small:not(.ovp-liveui),
+  &.ovp-layout-x-small:not(.ovp-live),
+  &.ovp-layout-tiny {
+    .ovp-subs-caps-button {
       display: none;
     }
   }
@@ -59,19 +59,19 @@
   // With the new Live UI, we can have the same treatment as "tiny". At
   // "x-small", the Live UI makes the progress control very small and almost
   // useless.
-  &.vjs-layout-x-small.vjs-liveui,
-  &.vjs-layout-tiny {
+  &.ovp-layout-x-small.ovp-liveui,
+  &.ovp-layout-tiny {
 
-    .vjs-custom-control-spacer {
+    .ovp-custom-control-spacer {
       @include flex(auto);
       display: block;
     }
 
-    &.vjs-no-flex .vjs-custom-control-spacer {
+    &.ovp-no-flex .ovp-custom-control-spacer {
       width: auto;
     }
 
-    .vjs-progress-control {
+    .ovp-progress-control {
       display: none;
     }
   }

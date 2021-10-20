@@ -75,7 +75,7 @@ class ClickableComponent extends Component {
     const el = Dom.createEl(tag, props, attributes);
 
     el.appendChild(Dom.createEl('span', {
-      className: 'vjs-icon-placeholder'
+      className: 'ovp-icon-placeholder'
     }, {
       'aria-hidden': true
     }));
@@ -103,7 +103,7 @@ class ClickableComponent extends Component {
    */
   createControlTextEl(el) {
     this.controlTextEl_ = Dom.createEl('span', {
-      className: 'vjs-control-text'
+      className: 'ovp-control-text'
     }, {
       // let the screen reader user know that the text of the element may change
       'aria-live': 'polite'
@@ -152,7 +152,7 @@ class ClickableComponent extends Component {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-control vjs-button ${super.buildCSSClass()}`;
+    return `ovp-control ovp-button ${super.buildCSSClass()}`;
   }
 
   /**
@@ -161,7 +161,7 @@ class ClickableComponent extends Component {
   enable() {
     if (!this.enabled_) {
       this.enabled_ = true;
-      this.removeClass('vjs-disabled');
+      this.removeClass('ovp-disabled');
       this.el_.setAttribute('aria-disabled', 'false');
       if (typeof this.tabIndex_ !== 'undefined') {
         this.el_.setAttribute('tabIndex', this.tabIndex_);
@@ -176,7 +176,7 @@ class ClickableComponent extends Component {
    */
   disable() {
     this.enabled_ = false;
-    this.addClass('vjs-disabled');
+    this.addClass('ovp-disabled');
     this.el_.setAttribute('aria-disabled', 'true');
     if (typeof this.tabIndex_ !== 'undefined') {
       this.el_.removeAttribute('tabIndex');

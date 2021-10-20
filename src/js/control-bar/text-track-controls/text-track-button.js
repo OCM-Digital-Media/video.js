@@ -77,7 +77,7 @@ class TextTrackButton extends TrackButton {
           multiSelectable: false
         });
 
-        item.addClass(`vjs-${track.kind}-menu-item`);
+        item.addClass(`ovp-${track.kind}-menu-item`);
         items.push(item);
       }
     }

@@ -33,7 +33,7 @@ class RemainingTimeDisplay extends TimeDisplay {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return 'vjs-remaining-time';
+    return 'ovp-remaining-time';
   }
 
   /**

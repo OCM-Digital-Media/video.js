@@ -21,12 +21,12 @@ class LoadingSpinner extends Component {
     const isAudio = this.player_.isAudio();
     const playerType = this.localize(isAudio ? 'Audio Player' : 'Video Player');
     const controlText = dom.createEl('span', {
-      className: 'vjs-control-text',
+      className: 'ovp-control-text',
       textContent: this.localize('{1} is loading.', [playerType])
     });
 
     const el = super.createEl('div', {
-      className: 'vjs-loading-spinner',
+      className: 'ovp-loading-spinner',
       dir: 'ltr'
     });
 

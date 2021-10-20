@@ -36,7 +36,7 @@ class CaptionSettingsMenuItem extends TextTrackMenuItem {
     options.name = 'CaptionSettingsMenuItem';
 
     super(player, options);
-    this.addClass('vjs-texttrack-settings');
+    this.addClass('ovp-texttrack-settings');
     this.controlText(', opens ' + options.kind + ' settings dialog');
   }
 

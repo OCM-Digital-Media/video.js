@@ -38,13 +38,13 @@ class LoadProgressBar extends Component {
    *         The element that was created.
    */
   createEl() {
-    const el = super.createEl('div', {className: 'vjs-load-progress'});
-    const wrapper = Dom.createEl('span', {className: 'vjs-control-text'});
+    const el = super.createEl('div', {className: 'ovp-load-progress'});
+    const wrapper = Dom.createEl('span', {className: 'ovp-control-text'});
     const loadedText = Dom.createEl('span', {textContent: this.localize('Loaded')});
     const separator = document.createTextNode(': ');
 
     this.percentageEl_ = Dom.createEl('span', {
-      className: 'vjs-control-text-loaded-percentage',
+      className: 'ovp-control-text-loaded-percentage',
       textContent: '0%'
     });
 

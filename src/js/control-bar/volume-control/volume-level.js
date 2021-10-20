@@ -18,11 +18,11 @@ class VolumeLevel extends Component {
    */
   createEl() {
     const el = super.createEl('div', {
-      className: 'vjs-volume-level'
+      className: 'ovp-volume-level'
     });
 
     el.appendChild(super.createEl('span', {
-      className: 'vjs-control-text'
+      className: 'ovp-control-text'
     }));
 
     return el;

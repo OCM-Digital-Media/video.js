@@ -38,11 +38,11 @@ class ChaptersButton extends TextTrackButton {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-chapters-button ${super.buildCSSClass()}`;
+    return `ovp-chapters-button ${super.buildCSSClass()}`;
   }
 
   buildWrapperCSSClass() {
-    return `vjs-chapters-button ${super.buildWrapperCSSClass()}`;
+    return `ovp-chapters-button ${super.buildWrapperCSSClass()}`;
   }
 
   /**

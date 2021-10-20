@@ -216,7 +216,7 @@ class TextTrackDisplay extends Component {
    */
   createEl() {
     return super.createEl('div', {
-      className: 'vjs-text-track-display'
+      className: 'ovp-text-track-display'
     }, {
       'aria-live': 'off',
       'aria-atomic': 'true'
@@ -417,8 +417,8 @@ class TextTrackDisplay extends Component {
       for (let j = 0; j < track.activeCues.length; ++j) {
         const cueEl = track.activeCues[j].displayState;
 
-        Dom.addClass(cueEl, 'vjs-text-track-cue');
-        Dom.addClass(cueEl, 'vjs-text-track-cue-' + ((track.language) ? track.language : i));
+        Dom.addClass(cueEl, 'ovp-text-track-cue');
+        Dom.addClass(cueEl, 'ovp-text-track-cue-' + ((track.language) ? track.language : i));
       }
       if (this.player_.textTrackSettings) {
         this.updateDisplayState(track);

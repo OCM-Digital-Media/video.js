@@ -44,7 +44,7 @@
 
 @import "print";
 
-.vjs-resize-manager {
+.ovp-resize-manager {
   position: absolute;
   top: 0;
   left: 0;
@@ -55,10 +55,10 @@
 }
 
 // The rule is needed for :focus-visible polyfill
-.js-focus-visible .video-js *:focus:not(.focus-visible) {
+.js-focus-visible .ovp *:focus:not(.focus-visible) {
   outline: none;
 }
 
-.video-js *:focus:not(:focus-visible) {
+.ovp *:focus:not(:focus-visible) {
   outline: none;
 }

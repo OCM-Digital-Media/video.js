@@ -48,7 +48,7 @@ class Button extends ClickableComponent {
     const el = createEl(tag, props, attributes);
 
     el.appendChild(createEl('span', {
-      className: 'vjs-icon-placeholder'
+      className: 'ovp-icon-placeholder'
     }, {
       'aria-hidden': true
     }));

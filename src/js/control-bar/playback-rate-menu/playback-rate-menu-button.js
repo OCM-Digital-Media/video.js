@@ -44,10 +44,10 @@ class PlaybackRateMenuButton extends MenuButton {
   createEl() {
     const el = super.createEl();
 
-    this.labelElId_ = 'vjs-playback-rate-value-label-' + this.id_;
+    this.labelElId_ = 'ovp-playback-rate-value-label-' + this.id_;
 
     this.labelEl_ = Dom.createEl('div', {
-      className: 'vjs-playback-rate-value',
+      className: 'ovp-playback-rate-value',
       id: this.labelElId_,
       textContent: '1x'
     });
@@ -70,11 +70,11 @@ class PlaybackRateMenuButton extends MenuButton {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-playback-rate ${super.buildCSSClass()}`;
+    return `ovp-playback-rate ${super.buildCSSClass()}`;
   }
 
   buildWrapperCSSClass() {
-    return `vjs-playback-rate ${super.buildWrapperCSSClass()}`;
+    return `ovp-playback-rate ${super.buildWrapperCSSClass()}`;
   }
 
   /**
@@ -174,9 +174,9 @@ class PlaybackRateMenuButton extends MenuButton {
    */
   updateVisibility(event) {
     if (this.playbackRateSupported()) {
-      this.removeClass('vjs-hidden');
+      this.removeClass('ovp-hidden');
     } else {
-      this.addClass('vjs-hidden');
+      this.addClass('ovp-hidden');
     }
   }
 

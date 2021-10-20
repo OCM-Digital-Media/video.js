@@ -837,38 +837,38 @@ class Component {
 
   /**
    * Show the `Component`s element if it is hidden by removing the
-   * 'vjs-hidden' class name from it.
+   * 'ovp-hidden' class name from it.
    */
   show() {
-    this.removeClass('vjs-hidden');
+    this.removeClass('ovp-hidden');
   }
 
   /**
    * Hide the `Component`s element if it is currently showing by adding the
-   * 'vjs-hidden` class name to it.
+   * 'ovp-hidden` class name to it.
    */
   hide() {
-    this.addClass('vjs-hidden');
+    this.addClass('ovp-hidden');
   }
 
   /**
-   * Lock a `Component`s element in its visible state by adding the 'vjs-lock-showing'
+   * Lock a `Component`s element in its visible state by adding the 'ovp-lock-showing'
    * class name to it. Used during fadeIn/fadeOut.
    *
    * @private
    */
   lockShowing() {
-    this.addClass('vjs-lock-showing');
+    this.addClass('ovp-lock-showing');
   }
 
   /**
-   * Unlock a `Component`s element from its visible state by removing the 'vjs-lock-showing'
+   * Unlock a `Component`s element from its visible state by removing the 'ovp-lock-showing'
    * class name from it. Used during fadeIn/fadeOut.
    *
    * @private
    */
   unlockShowing() {
-    this.removeClass('vjs-lock-showing');
+    this.removeClass('ovp-lock-showing');
   }
 
   /**

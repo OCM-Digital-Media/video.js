@@ -40,7 +40,7 @@ class PictureInPictureToggle extends Button {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-picture-in-picture-control ${super.buildCSSClass()}`;
+    return `ovp-picture-in-picture-control ${super.buildCSSClass()}`;
   }
 
   /**

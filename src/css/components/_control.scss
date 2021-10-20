@@ -1,7 +1,7 @@
-// vjs-control might be better named vjs-button now.
+// ovp-control might be better named ovp-button now.
 // It's used on both real buttons (play button)
 // and div buttons (menu buttons)
-.video-js .vjs-control {
+.ovp .ovp-control {
   position: relative;
   text-align: center;
   margin: 0;
@@ -11,30 +11,30 @@
   @include flex(none);
 
 }
-.vjs-button > .vjs-icon-placeholder:before {
+.ovp-button > .ovp-icon-placeholder:before {
   font-size: 1.8em;
   line-height: 1.67;
 
   @extend %icon-default;
 }
 
-.vjs-button > .vjs-icon-placeholder {
+.ovp-button > .ovp-icon-placeholder {
     display: block;
 }
 
 // Replacement for focus outline
-.video-js .vjs-control:focus:before,
-.video-js .vjs-control:hover:before,
-.video-js .vjs-control:focus {
+.ovp .ovp-control:focus:before,
+.ovp .ovp-control:hover:before,
+.ovp .ovp-control:focus {
   text-shadow: 0em 0em 1em rgba($primary-foreground-color, 1);
 }
 
 // Hide control text visually, but have it available for screenreaders
-.video-js .vjs-control-text {
+.ovp .ovp-control-text {
   @include hide-visually;
 }
 
-.vjs-no-flex .vjs-control {
+.ovp-no-flex .ovp-control {
   display: table-cell;
   vertical-align: middle;
 }

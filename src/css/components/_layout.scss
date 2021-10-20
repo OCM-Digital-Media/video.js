@@ -1,6 +1,6 @@
 @use "sass:math";
 
-.video-js {
+.ovp {
   // display:inline-block would be closer to the video el's display:inline
   // but it results in flash reloading when going into fullscreen [#2205]
   // TODO: Still needed?
@@ -32,24 +32,24 @@
     width: 100% !important;
     height: 100% !important;
   }
-  
+
   // reset word-break inside the player div
   word-break: initial;
 }
 
-.video-js[tabindex="-1"] {
+.ovp[tabindex="-1"] {
   outline: none;
 }
 
 // All elements inherit border-box sizing
-.video-js *,
-.video-js *:before,
-.video-js *:after {
+.ovp *,
+.ovp *:before,
+.ovp *:after {
   box-sizing: inherit;
 }
 
 // List style reset
-.video-js ul {
+.ovp ul {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -68,42 +68,42 @@
   padding-top: 100% * math.div($height, $width);
 }
 
-// Not including a default AR in vjs-fluid because it would override
+// Not including a default AR in ovp-fluid because it would override
 // the user set AR injected into the header.
-.video-js.vjs-fluid,
-.video-js.vjs-16-9,
-.video-js.vjs-4-3,
-.video-js.vjs-9-16,
-.video-js.vjs-1-1 {
+.ovp.ovp-fluid,
+.ovp.ovp-16-9,
+.ovp.ovp-4-3,
+.ovp.ovp-9-16,
+.ovp.ovp-1-1 {
   width: 100%;
   max-width: 100%;
   height: 0;
 }
 
-.video-js.vjs-16-9 {
+.ovp.ovp-16-9 {
   @include apply-aspect-ratio(16, 9);
 }
 
-.video-js.vjs-4-3 {
+.ovp.ovp-4-3 {
   @include apply-aspect-ratio(4, 3);
 }
 
-.video-js.vjs-9-16 {
+.ovp.ovp-9-16 {
   @include apply-aspect-ratio(9, 16);
 }
 
-.video-js.vjs-1-1 {
+.ovp.ovp-1-1 {
   @include apply-aspect-ratio(1, 1);
 }
 
-.video-js.vjs-fill {
+.ovp.ovp-fill {
   width: 100%;
   height: 100%;
 }
 
 // Playback technology elements expand to the width/height of the containing div
 // <video> or <object>
-.video-js .vjs-tech {
+.ovp .ovp-tech {
   position: absolute;
   top: 0;
   left: 0;
@@ -112,12 +112,12 @@
 }
 
 // Fullscreen Styles
-body.vjs-full-window {
+body.ovp-full-window {
   padding: 0;
   margin: 0;
   height: 100%;
 }
-.vjs-full-window .video-js.vjs-fullscreen {
+.ovp-full-window .ovp.ovp-fullscreen {
   position: fixed;
   overflow: hidden;
   z-index: 1000;
@@ -126,28 +126,28 @@ body.vjs-full-window {
   bottom: 0;
   right: 0;
 }
-.video-js.vjs-fullscreen:not(.vjs-ios-native-fs) {
+.ovp.ovp-fullscreen:not(.ovp-ios-native-fs) {
   width: 100% !important;
   height: 100% !important;
   // Undo any aspect ratio padding for fluid layouts
   padding-top: 0 !important;
 }
 
-.video-js.vjs-fullscreen.vjs-user-inactive {
+.ovp.ovp-fullscreen.ovp-user-inactive {
   cursor: none;
 }
 
 
 // Hide disabled or unsupported controls.
-.vjs-hidden { display: none !important; }
+.ovp-hidden { display: none !important; }
 
-.vjs-disabled {
+.ovp-disabled {
   opacity: 0.5;
   cursor: default;
 }
 
 // Visually hidden offscreen, but accessible to screen readers.
-.video-js .vjs-offscreen {
+.ovp .ovp-offscreen {
   height: 1px;
   left: -9999px;
   position: absolute;
@@ -155,7 +155,7 @@ body.vjs-full-window {
   width: 1px;
 }
 
-.vjs-lock-showing {
+.ovp-lock-showing {
   display: block !important;
   opacity: 1 !important;
   visibility: visible !important;
@@ -163,7 +163,7 @@ body.vjs-full-window {
 
 // This optional paragraph inside the video tag can provide a message to users
 // about what's required to play video when JavaScript is disabled
-.vjs-no-js {
+.ovp-no-js {
   padding: 20px;
   color: #fff;
   background-color: #000;
@@ -175,7 +175,7 @@ body.vjs-full-window {
   margin: 0px auto;
 }
 
-.vjs-no-js a,
-.vjs-no-js a:visited {
+.ovp-no-js a,
+.ovp-no-js a:visited {
   color: #66A8CC;
 }

@@ -102,7 +102,7 @@
         var test = tests.shift();
         var video = document.createElement('video');
 
-        video.setAttribute('class', 'video-js');
+        video.setAttribute('class', 'ovp');
         video.setAttribute('id', test.name);
         video.setAttribute('controls', true);
 

@@ -44,7 +44,7 @@ class ProgressControl extends Component {
    */
   createEl() {
     return super.createEl('div', {
-      className: 'vjs-progress-control vjs-control'
+      className: 'ovp-progress-control ovp-control'
     });
   }
 

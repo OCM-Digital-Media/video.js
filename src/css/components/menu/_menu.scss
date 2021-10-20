@@ -1,18 +1,18 @@
-.vjs-menu-button {
+.ovp-menu-button {
   cursor: pointer;
 }
 
 // Change cursor back to default if the menu button is disabled
-.vjs-menu-button.vjs-disabled {
+.ovp-menu-button.ovp-disabled {
   cursor: default;
 }
 
 // prevent menus from opening while disabled
-.vjs-workinghover .vjs-menu-button.vjs-disabled:hover .vjs-menu {
+.ovp-workinghover .ovp-menu-button.ovp-disabled:hover .ovp-menu {
   display: none;
 }
 
-.vjs-menu .vjs-menu-content {
+.ovp-menu .ovp-menu-content {
   display: block;
   padding: 0;
   margin: 0;
@@ -23,16 +23,16 @@
 }
 
 // Reset box-sizing inside the menu.
-.vjs-menu .vjs-menu-content > * {
+.ovp-menu .ovp-menu-content > * {
   box-sizing: border-box;
 }
 
 // prevent menus from opening while scrubbing
-.vjs-scrubbing .vjs-control.vjs-menu-button:hover .vjs-menu {
+.ovp-scrubbing .ovp-control.ovp-menu-button:hover .ovp-menu {
   display: none;
 }
 
-.vjs-menu li {
+.ovp-menu li {
   list-style: none;
   margin: 0;
   padding: 0.2em 0;
@@ -42,26 +42,26 @@
   text-transform: lowercase;
 }
 
-.vjs-menu li.vjs-menu-item:focus,
-.vjs-menu li.vjs-menu-item:hover,
-.js-focus-visible .vjs-menu li.vjs-menu-item:hover {
+.ovp-menu li.ovp-menu-item:focus,
+.ovp-menu li.ovp-menu-item:hover,
+.js-focus-visible .ovp-menu li.ovp-menu-item:hover {
   @include background-color-with-alpha($secondary-background-color, $secondary-background-transparency);
 }
 
-.vjs-menu li.vjs-selected,
-.vjs-menu li.vjs-selected:focus,
-.vjs-menu li.vjs-selected:hover,
-.js-focus-visible .vjs-menu li.vjs-selected:hover {
+.ovp-menu li.ovp-selected,
+.ovp-menu li.ovp-selected:focus,
+.ovp-menu li.ovp-selected:hover,
+.js-focus-visible .ovp-menu li.ovp-selected:hover {
   background-color: $primary-foreground-color;
   color: $primary-background-color;
 }
 
-.video-js .vjs-menu *:not(.vjs-selected):focus:not(:focus-visible),
-.js-focus-visible .vjs-menu *:not(.vjs-selected):focus:not(.focus-visible) {
+.ovp .ovp-menu *:not(.ovp-selected):focus:not(:focus-visible),
+.js-focus-visible .ovp-menu *:not(.ovp-selected):focus:not(.focus-visible) {
   background: none;
 }
 
-.vjs-menu li.vjs-menu-title {
+.ovp-menu li.ovp-menu-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 1em;

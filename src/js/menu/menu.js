@@ -116,14 +116,14 @@ class Menu extends Component {
     const contentElType = this.options_.contentElType || 'ul';
 
     this.contentEl_ = Dom.createEl(contentElType, {
-      className: 'vjs-menu-content'
+      className: 'ovp-menu-content'
     });
 
     this.contentEl_.setAttribute('role', 'menu');
 
     const el = super.createEl('div', {
       append: this.contentEl_,
-      className: 'vjs-menu'
+      className: 'ovp-menu'
     });
 
     el.appendChild(this.contentEl_);
@@ -258,7 +258,7 @@ class Menu extends Component {
    */
   focus(item = 0) {
     const children = this.children().slice();
-    const haveTitle = children.length && children[0].hasClass('vjs-menu-title');
+    const haveTitle = children.length && children[0].hasClass('ovp-menu-title');
 
     if (haveTitle) {
       children.shift();

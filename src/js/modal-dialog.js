@@ -7,7 +7,7 @@ import window from 'global/window';
 import document from 'global/document';
 import keycode from 'keycode';
 
-const MODAL_CLASS_NAME = 'vjs-modal-dialog';
+const MODAL_CLASS_NAME = 'ovp-modal-dialog';
 
 /**
  * The `ModalDialog` displays over the video and its controls, which blocks
@@ -76,7 +76,7 @@ class ModalDialog extends Component {
     });
 
     this.descEl_ = Dom.createEl('p', {
-      className: `${MODAL_CLASS_NAME}-description vjs-control-text`,
+      className: `${MODAL_CLASS_NAME}-description ovp-control-text`,
       id: this.el().getAttribute('aria-describedby')
     });
 
@@ -118,7 +118,7 @@ class ModalDialog extends Component {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `${MODAL_CLASS_NAME} vjs-hidden ${super.buildCSSClass()}`;
+    return `${MODAL_CLASS_NAME} ovp-hidden ${super.buildCSSClass()}`;
   }
 
   /**

@@ -18,7 +18,7 @@ class CurrentTimeDisplay extends TimeDisplay {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return 'vjs-current-time';
+    return 'ovp-current-time';
   }
 
   /**

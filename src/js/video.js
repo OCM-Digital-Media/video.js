@@ -192,10 +192,10 @@ videojs.removeHook = removeHook;
 
 // Add default styles
 if (window.VIDEOJS_NO_DYNAMIC_STYLE !== true && Dom.isReal()) {
-  let style = Dom.$('.vjs-styles-defaults');
+  let style = Dom.$('.ovp-styles-defaults');
 
   if (!style) {
-    style = stylesheet.createStyleElement('vjs-styles-defaults');
+    style = stylesheet.createStyleElement('ovp-styles-defaults');
     const head = Dom.$('head');
 
     if (head) {
@@ -207,7 +207,7 @@ if (window.VIDEOJS_NO_DYNAMIC_STYLE !== true && Dom.isReal()) {
         height: 150px;
       }
 
-      .vjs-fluid {
+      .ovp-fluid {
         padding-top: 56.25%
       }
     `);

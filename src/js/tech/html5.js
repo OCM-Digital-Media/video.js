@@ -395,7 +395,7 @@ class Html5 extends Tech {
           el,
           assign(attributes, {
             id: this.options_.techId,
-            class: 'vjs-tech'
+            class: 'ovp-tech'
           })
         );
       }

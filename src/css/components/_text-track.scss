@@ -1,5 +1,5 @@
 // Emulated tracks
-.vjs-text-track-display {
+.ovp-text-track-display {
   position: absolute;
   bottom: 3em;
   left: 0;
@@ -9,20 +9,20 @@
 }
 
 // Move captions down when controls aren't being shown
-.video-js.vjs-user-inactive.vjs-playing .vjs-text-track-display {
+.ovp.ovp-user-inactive.ovp-playing .ovp-text-track-display {
   bottom: 1em;
 }
 
 // Individual tracks
-.video-js .vjs-text-track {
+.ovp .ovp-text-track {
   font-size: 1.4em;
   text-align: center;
   margin-bottom: 0.1em;
 }
 
-.vjs-subtitles { color: #fff; } // Subtitles are white
-.vjs-captions { color: #fc6; } // Captions are yellow
-.vjs-tt-cue { display: block; }
+.ovp-subtitles { color: #fff; } // Subtitles are white
+.ovp-captions { color: #fc6; } // Captions are yellow
+.ovp-tt-cue { display: block; }
 
 // Native tracks
 video::-webkit-media-text-track-display {
@@ -30,6 +30,6 @@ video::-webkit-media-text-track-display {
 }
 
 // Move captions down when controls aren't being shown
-.video-js.vjs-user-inactive.vjs-playing video::-webkit-media-text-track-display {
+.ovp.ovp-user-inactive.ovp-playing video::-webkit-media-text-track-display {
   @include transform(translateY(-1.5em));
 }

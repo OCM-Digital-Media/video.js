@@ -34,11 +34,11 @@ class SubtitlesButton extends TextTrackButton {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-subtitles-button ${super.buildCSSClass()}`;
+    return `ovp-subtitles-button ${super.buildCSSClass()}`;
   }
 
   buildWrapperCSSClass() {
-    return `vjs-subtitles-button ${super.buildWrapperCSSClass()}`;
+    return `ovp-subtitles-button ${super.buildWrapperCSSClass()}`;
   }
 }
 

@@ -2,9 +2,9 @@
   "name": "video.js",
   "description": "An HTML5 video player that supports HLS and DASH with a common API and skin.",
   "version": "7.16.0",
-  "main": "./dist/video.cjs.js",
-  "module": "./dist/video.es.js",
-  "style": "./dist/video-js.css",
+  "main": "./dist/ovp.cjs.js",
+  "module": "./dist/ovp.es.js",
+  "style": "./dist/ovp.css",
   "copyright": "Copyright Brightcove, Inc. <https://www.brightcove.com/>",
   "license": "Apache-2.0",
   "keywords": [

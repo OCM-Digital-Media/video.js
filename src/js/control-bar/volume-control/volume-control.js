@@ -50,14 +50,14 @@ class VolumeControl extends Component {
     // while the slider is active (the mouse has been pressed down and
     // is dragging) or in focus we do not want to hide the VolumeBar
     this.on(this.volumeBar, ['focus', 'slideractive'], () => {
-      this.volumeBar.addClass('vjs-slider-active');
-      this.addClass('vjs-slider-active');
+      this.volumeBar.addClass('ovp-slider-active');
+      this.addClass('ovp-slider-active');
       this.trigger('slideractive');
     });
 
     this.on(this.volumeBar, ['blur', 'sliderinactive'], () => {
-      this.volumeBar.removeClass('vjs-slider-active');
-      this.removeClass('vjs-slider-active');
+      this.volumeBar.removeClass('ovp-slider-active');
+      this.removeClass('ovp-slider-active');
       this.trigger('sliderinactive');
     });
   }
@@ -69,14 +69,14 @@ class VolumeControl extends Component {
    *         The element that was created.
    */
   createEl() {
-    let orientationClass = 'vjs-volume-horizontal';
+    let orientationClass = 'ovp-volume-horizontal';
 
     if (this.options_.vertical) {
-      orientationClass = 'vjs-volume-vertical';
+      orientationClass = 'ovp-volume-vertical';
     }
 
     return super.createEl('div', {
-      className: `vjs-volume-control vjs-control ${orientationClass}`
+      className: `ovp-volume-control ovp-control ${orientationClass}`
     });
   }
 

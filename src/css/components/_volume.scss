@@ -1,32 +1,32 @@
-.video-js .vjs-mute-control {
+.ovp .ovp-mute-control {
   cursor: pointer;
   @include flex(none);
 
-  & .vjs-icon-placeholder {
-    @extend .vjs-icon-volume-high;
+  & .ovp-icon-placeholder {
+    @extend .ovp-icon-volume-high;
   }
 }
 
-.video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder {
-  @extend .vjs-icon-volume-mute;
+.ovp .ovp-mute-control.ovp-vol-0 .ovp-icon-placeholder {
+  @extend .ovp-icon-volume-mute;
 }
-.video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder {
-  @extend .vjs-icon-volume-low;
+.ovp .ovp-mute-control.ovp-vol-1 .ovp-icon-placeholder {
+  @extend .ovp-icon-volume-low;
 }
-.video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder {
-  @extend .vjs-icon-volume-mid;
+.ovp .ovp-mute-control.ovp-vol-2 .ovp-icon-placeholder {
+  @extend .ovp-icon-volume-mid;
 }
 
-.video-js .vjs-volume-control {
+.ovp .ovp-volume-control {
   cursor: pointer;
   margin-right: 1em;
   @include display-flex;
 }
-.video-js .vjs-volume-control.vjs-volume-horizontal {
+.ovp .ovp-volume-control.ovp-volume-horizontal {
   width: 5em;
 }
 
-.video-js .vjs-volume-panel .vjs-volume-control {
+.ovp .ovp-volume-panel .ovp-volume-control {
   visibility: visible;
   opacity: 0;
   width: 1px;
@@ -34,14 +34,14 @@
   margin-left: -1px;
 }
 
-.video-js .vjs-volume-panel {
-  &.vjs-hover .vjs-volume-control,
-  &:active .vjs-volume-control,
-  &:focus  .vjs-volume-control,
-  & .vjs-volume-control:active,
-  &.vjs-hover .vjs-mute-control  ~ .vjs-volume-control,
-  & .vjs-volume-control.vjs-slider-active {
-    &.vjs-volume-horizontal {
+.ovp .ovp-volume-panel {
+  &.ovp-hover .ovp-volume-control,
+  &:active .ovp-volume-control,
+  &:focus  .ovp-volume-control,
+  & .ovp-volume-control:active,
+  &.ovp-hover .ovp-mute-control  ~ .ovp-volume-control,
+  & .ovp-volume-control.ovp-slider-active {
+    &.ovp-volume-horizontal {
       width: 5em;
       height: 3em;
       margin-right: 0;
@@ -50,7 +50,7 @@
     opacity: 1;
     position: relative;
 
-    &.vjs-volume-vertical {
+    &.ovp-volume-vertical {
       left: -3.5em;
       @include transition(left 0s);
     }
@@ -58,15 +58,15 @@
     @include transition($transition-property);
   }
 
-  &.vjs-volume-panel-horizontal {
-    &.vjs-hover,
+  &.ovp-volume-panel-horizontal {
+    &.ovp-hover,
     &:active,
-    &.vjs-slider-active {
+    &.ovp-slider-active {
       width: 10em;
 
       @include transition(width 0.1s);
     }
-    &.vjs-mute-toggle-only {
+    &.ovp-mute-toggle-only {
       width: 4em;
     }
   }
@@ -74,7 +74,7 @@
   @include transition(width 1s);
 }
 
-.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+.ovp .ovp-volume-panel .ovp-volume-control.ovp-volume-vertical {
   height: 8em;
   width: 3em;
   left: -3000em;
@@ -83,12 +83,12 @@
   @include transition($transition-property)
 }
 
-.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+.ovp .ovp-volume-panel .ovp-volume-control.ovp-volume-horizontal {
   $transition-property: visibility 1s, opacity 1s, height 1s 1s, width 1s, left 1s 1s, top 1s 1s;
   @include transition($transition-property)
 }
 
-.video-js.vjs-no-flex .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+.ovp.ovp-no-flex .ovp-volume-panel .ovp-volume-control.ovp-volume-horizontal {
   width: 5em;
   height: 3em;
 
@@ -99,40 +99,40 @@
   @include transition(none);
 }
 
-.video-js.vjs-no-flex .vjs-volume-control.vjs-volume-vertical,
-.video-js.vjs-no-flex .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+.ovp.ovp-no-flex .ovp-volume-control.ovp-volume-vertical,
+.ovp.ovp-no-flex .ovp-volume-panel .ovp-volume-control.ovp-volume-vertical {
   position: absolute;
   bottom: 3em;
   left: 0.5em;
 }
 
-.video-js .vjs-volume-panel {
+.ovp .ovp-volume-panel {
   @include display-flex;
 }
 
-.video-js .vjs-volume-bar {
+.ovp .ovp-volume-bar {
   margin: 1.35em 0.45em;
 }
 
-.vjs-volume-bar.vjs-slider-horizontal {
+.ovp-volume-bar.ovp-slider-horizontal {
   width: 5em;
   height: 0.3em;
 }
 
-.vjs-volume-bar.vjs-slider-vertical {
+.ovp-volume-bar.ovp-slider-vertical {
   width: 0.3em;
   height: 5em;
   margin: 1.35em auto;
 }
 
-.video-js .vjs-volume-level {
+.ovp .ovp-volume-level {
   position: absolute;
   bottom: 0;
   left: 0;
 
   background-color: $primary-foreground-color;
 
-  @extend .vjs-icon-circle;
+  @extend .ovp-icon-circle;
 
   // Volume handle
   &:before {
@@ -142,7 +142,7 @@
   }
 }
 
-.vjs-slider-vertical .vjs-volume-level {
+.ovp-slider-vertical .ovp-volume-level {
   width: 0.3em;
 
   // Volume handle
@@ -152,7 +152,7 @@
     z-index: 1;
   }
 }
-.vjs-slider-horizontal .vjs-volume-level {
+.ovp-slider-horizontal .ovp-volume-level {
   height: 0.3em;
 
   // Volume handle
@@ -162,20 +162,20 @@
   }
 }
 
-.video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+.ovp .ovp-volume-panel.ovp-volume-panel-vertical {
   width: 4em;
 }
 
 // Assumes volume starts at 1.0.
-.vjs-volume-bar.vjs-slider-vertical .vjs-volume-level {
+.ovp-volume-bar.ovp-slider-vertical .ovp-volume-level {
   height: 100%;
 }
 
-.vjs-volume-bar.vjs-slider-horizontal .vjs-volume-level {
+.ovp-volume-bar.ovp-slider-horizontal .ovp-volume-level {
   width: 100%;
 }
 
-.video-js .vjs-volume-vertical {
+.ovp .ovp-volume-vertical {
   width: 3em;
   height: 8em;
   bottom: 8em;
@@ -183,17 +183,17 @@
   @include background-color-with-alpha($primary-background-color, $primary-background-transparency);
 }
 
-.video-js .vjs-volume-horizontal .vjs-menu {
+.ovp .ovp-volume-horizontal .ovp-menu {
   left: -2em;
 }
 
-// .vjs-volume-tooltip
+// .ovp-volume-tooltip
 //
 // These elements are displayed above the volume bar.
 //
 // By default, they are hidden and only shown when hovering over the volume
 // control.
-.video-js .vjs-volume-tooltip {
+.ovp .ovp-volume-tooltip {
   @include background-color-with-alpha(#fff, 0.8);
   @include border-radius(0.3em);
   color: #000;
@@ -208,28 +208,28 @@
   z-index: 1;
 }
 
-.video-js .vjs-volume-control:hover .vjs-volume-tooltip,
-.video-js .vjs-volume-control:hover .vjs-progress-holder:focus .vjs-volume-tooltip {
+.ovp .ovp-volume-control:hover .ovp-volume-tooltip,
+.ovp .ovp-volume-control:hover .ovp-progress-holder:focus .ovp-volume-tooltip {
   display: block;
   font-size: 1em;
   visibility: visible;
 }
 
-.video-js .vjs-volume-vertical:hover .vjs-volume-tooltip,
-.video-js .vjs-volume-vertical:hover .vjs-progress-holder:focus .vjs-volume-tooltip {
+.ovp .ovp-volume-vertical:hover .ovp-volume-tooltip,
+.ovp .ovp-volume-vertical:hover .ovp-progress-holder:focus .ovp-volume-tooltip {
   left: 1em;
   top: -12px;
 }
 
-.video-js .vjs-volume-control.disabled:hover .vjs-volume-tooltip {
+.ovp .ovp-volume-control.disabled:hover .ovp-volume-tooltip {
   font-size: 1em;
 }
 
-// .vjs-mouse-display / MouseVolumeLevelDisplay
+// .ovp-mouse-display / MouseVolumeLevelDisplay
 //
 // This element tracks the mouse position along the volume control and
 // includes a tooltip, which displays the volume level.
-.video-js .vjs-volume-control .vjs-mouse-display {
+.ovp .ovp-volume-control .ovp-mouse-display {
   display: none;
   position: absolute;
   width: 100%;
@@ -238,31 +238,31 @@
   z-index: 1;
 }
 
-.video-js .vjs-volume-horizontal .vjs-mouse-display {
+.ovp .ovp-volume-horizontal .ovp-mouse-display {
   width: 1px;
   height: 100%;
 }
 
-.vjs-no-flex .vjs-volume-control .vjs-mouse-display {
+.ovp-no-flex .ovp-volume-control .ovp-mouse-display {
   z-index: 0;
 }
 
-.video-js .vjs-volume-control:hover .vjs-mouse-display {
+.ovp .ovp-volume-control:hover .ovp-mouse-display {
   display: block;
 }
 
-.video-js.vjs-user-inactive .vjs-volume-control .vjs-mouse-display {
+.ovp.ovp-user-inactive .ovp-volume-control .ovp-mouse-display {
   visibility: hidden;
   opacity: 0;
   $trans: visibility 1.0s, opacity 1.0s;
   @include transition($trans);
 }
 
-.video-js.vjs-user-inactive.vjs-no-flex .vjs-volume-control .vjs-mouse-display {
+.ovp.ovp-user-inactive.ovp-no-flex .ovp-volume-control .ovp-mouse-display {
   display: none;
 }
 
-.vjs-mouse-display .vjs-volume-tooltip {
+.ovp-mouse-display .ovp-volume-tooltip {
   color: #fff;
   @include background-color-with-alpha(#000, 0.8);
 }

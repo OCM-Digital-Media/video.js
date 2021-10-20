@@ -1,12 +1,12 @@
-.video-js .vjs-picture-in-picture-control {
+.ovp .ovp-picture-in-picture-control {
   cursor: pointer;
   @include flex(none);
 
-  & .vjs-icon-placeholder {
-    @extend .vjs-icon-picture-in-picture-enter;
+  & .ovp-icon-placeholder {
+    @extend .ovp-icon-picture-in-picture-enter;
   }
 }
 // Switch to the exit icon when the player is in Picture-in-Picture
-.video-js.vjs-picture-in-picture .vjs-picture-in-picture-control .vjs-icon-placeholder {
-  @extend .vjs-icon-picture-in-picture-exit;
+.ovp.ovp-picture-in-picture .ovp-picture-in-picture-control .ovp-icon-placeholder {
+  @extend .ovp-icon-picture-in-picture-exit;
 }

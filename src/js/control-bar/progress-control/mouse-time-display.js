@@ -38,7 +38,7 @@ class MouseTimeDisplay extends Component {
    */
   createEl() {
     return super.createEl('div', {
-      className: 'vjs-mouse-display'
+      className: 'ovp-mouse-display'
     });
   }
 

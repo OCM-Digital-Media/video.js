@@ -65,15 +65,15 @@ class MenuItem extends ClickableComponent {
     this.nonIconControl = true;
 
     const el = super.createEl('li', assign({
-      className: 'vjs-menu-item',
+      className: 'ovp-menu-item',
       tabIndex: -1
     }, props), attrs);
 
     // swap icon with menu item text.
     el.replaceChild(createEl('span', {
-      className: 'vjs-menu-item-text',
+      className: 'ovp-menu-item-text',
       textContent: this.localize(this.options_.label)
-    }), el.querySelector('.vjs-icon-placeholder'));
+    }), el.querySelector('.ovp-icon-placeholder'));
 
     return el;
   }
@@ -118,14 +118,14 @@ class MenuItem extends ClickableComponent {
   selected(selected) {
     if (this.selectable) {
       if (selected) {
-        this.addClass('vjs-selected');
+        this.addClass('ovp-selected');
         this.el_.setAttribute('aria-checked', 'true');
         // aria-checked isn't fully supported by browsers/screen readers,
         // so indicate selected state to screen reader in the control text.
         this.controlText(', selected');
         this.isSelected_ = true;
       } else {
-        this.removeClass('vjs-selected');
+        this.removeClass('ovp-selected');
         this.el_.setAttribute('aria-checked', 'false');
         // Indicate un-selected state to screen reader
         this.controlText('');

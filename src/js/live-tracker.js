@@ -138,11 +138,11 @@ class LiveTracker extends Component {
   toggleTracking() {
     if (this.player_.duration() === Infinity && this.liveWindow() >= this.options_.trackingThreshold) {
       if (this.player_.options_.liveui) {
-        this.player_.addClass('vjs-liveui');
+        this.player_.addClass('ovp-liveui');
       }
       this.startTracking();
     } else {
-      this.player_.removeClass('vjs-liveui');
+      this.player_.removeClass('ovp-liveui');
       this.stopTracking();
     }
   }

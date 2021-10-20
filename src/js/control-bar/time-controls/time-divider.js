@@ -19,7 +19,7 @@ class TimeDivider extends Component {
    */
   createEl() {
     const el = super.createEl('div', {
-      className: 'vjs-time-control vjs-time-divider'
+      className: 'ovp-time-control ovp-time-divider'
     }, {
       // this element and its contents can be hidden from assistive techs since
       // it is made extraneous by the announcement of the control text

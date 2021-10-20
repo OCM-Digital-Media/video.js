@@ -8,7 +8,7 @@ import {createEl} from '../utils/dom';
 import * as Obj from '../utils/obj';
 import log from '../utils/log';
 
-const LOCAL_STORAGE_KEY = 'vjs-text-track-settings';
+const LOCAL_STORAGE_KEY = 'ovp-text-track-settings';
 
 const COLOR_BLACK = ['#000', 'Black'];
 const COLOR_BLUE = ['#00F', 'Blue'];
@@ -36,7 +36,7 @@ const OPACITY_TRANS = ['0', 'Transparent'];
 //   The selector used to find the associated <select> element.
 const selectConfigs = {
   backgroundColor: {
-    selector: '.vjs-bg-color > select',
+    selector: '.ovp-bg-color > select',
     id: 'captions-background-color-%s',
     label: 'Color',
     options: [
@@ -52,7 +52,7 @@ const selectConfigs = {
   },
 
   backgroundOpacity: {
-    selector: '.vjs-bg-opacity > select',
+    selector: '.ovp-bg-opacity > select',
     id: 'captions-background-opacity-%s',
     label: 'Transparency',
     options: [
@@ -63,7 +63,7 @@ const selectConfigs = {
   },
 
   color: {
-    selector: '.vjs-fg-color > select',
+    selector: '.ovp-fg-color > select',
     id: 'captions-foreground-color-%s',
     label: 'Color',
     options: [
@@ -79,7 +79,7 @@ const selectConfigs = {
   },
 
   edgeStyle: {
-    selector: '.vjs-edge-style > select',
+    selector: '.ovp-edge-style > select',
     id: '%s',
     label: 'Text Edge Style',
     options: [
@@ -92,7 +92,7 @@ const selectConfigs = {
   },
 
   fontFamily: {
-    selector: '.vjs-font-family > select',
+    selector: '.ovp-font-family > select',
     id: 'captions-font-family-%s',
     label: 'Font Family',
     options: [
@@ -107,7 +107,7 @@ const selectConfigs = {
   },
 
   fontPercent: {
-    selector: '.vjs-font-percent > select',
+    selector: '.ovp-font-percent > select',
     id: 'captions-font-size-%s',
     label: 'Font Size',
     options: [
@@ -126,7 +126,7 @@ const selectConfigs = {
   },
 
   textOpacity: {
-    selector: '.vjs-text-opacity > select',
+    selector: '.ovp-text-opacity > select',
     id: 'captions-foreground-opacity-%s',
     label: 'Transparency',
     options: [
@@ -137,14 +137,14 @@ const selectConfigs = {
 
   // Options for this object are defined below.
   windowColor: {
-    selector: '.vjs-window-color > select',
+    selector: '.ovp-window-color > select',
     id: 'captions-window-color-%s',
     label: 'Color'
   },
 
   // Options for this object are defined below.
   windowOpacity: {
-    selector: '.vjs-window-opacity > select',
+    selector: '.ovp-window-opacity > select',
     id: 'captions-window-opacity-%s',
     label: 'Transparency',
     options: [
@@ -260,7 +260,7 @@ class TextTrackSettings extends ModalDialog {
     this.hasBeenOpened_ = this.hasBeenFilled_ = true;
 
     this.endDialog = createEl('p', {
-      className: 'vjs-control-text',
+      className: 'ovp-control-text',
       textContent: this.localize('End of dialog window.')
     });
     this.el().appendChild(this.endDialog);
@@ -272,12 +272,12 @@ class TextTrackSettings extends ModalDialog {
       this.options_.persistTextTrackSettings = this.options_.playerOptions.persistTextTrackSettings;
     }
 
-    this.on(this.$('.vjs-done-button'), 'click', () => {
+    this.on(this.$('.ovp-done-button'), 'click', () => {
       this.saveSettings();
       this.close();
     });
 
-    this.on(this.$('.vjs-default-button'), 'click', () => {
+    this.on(this.$('.ovp-default-button'), 'click', () => {
       this.setDefaults();
       this.updateDisplay();
     });
@@ -314,7 +314,7 @@ class TextTrackSettings extends ModalDialog {
     const selectLabelledbyIds = [legendId, id].join(' ').trim();
 
     return [
-      `<${type} id="${id}" class="${type === 'label' ? 'vjs-label' : ''}">`,
+      `<${type} id="${id}" class="${type === 'label' ? 'ovp-label' : ''}">`,
       this.localize(config.label),
       `</${type}>`,
       `<select aria-labelledby="${selectLabelledbyIds}">`
@@ -344,12 +344,12 @@ class TextTrackSettings extends ModalDialog {
     const legendId = `captions-text-legend-${this.id_}`;
 
     return [
-      '<fieldset class="vjs-fg-color vjs-track-setting">',
+      '<fieldset class="ovp-fg-color ovp-track-setting">',
       `<legend id="${legendId}">`,
       this.localize('Text'),
       '</legend>',
       this.createElSelect_('color', legendId),
-      '<span class="vjs-text-opacity vjs-opacity">',
+      '<span class="ovp-text-opacity ovp-opacity">',
       this.createElSelect_('textOpacity', legendId),
       '</span>',
       '</fieldset>'
@@ -368,12 +368,12 @@ class TextTrackSettings extends ModalDialog {
     const legendId = `captions-background-${this.id_}`;
 
     return [
-      '<fieldset class="vjs-bg-color vjs-track-setting">',
+      '<fieldset class="ovp-bg-color ovp-track-setting">',
       `<legend id="${legendId}">`,
       this.localize('Background'),
       '</legend>',
       this.createElSelect_('backgroundColor', legendId),
-      '<span class="vjs-bg-opacity vjs-opacity">',
+      '<span class="ovp-bg-opacity ovp-opacity">',
       this.createElSelect_('backgroundOpacity', legendId),
       '</span>',
       '</fieldset>'
@@ -392,12 +392,12 @@ class TextTrackSettings extends ModalDialog {
     const legendId = `captions-window-${this.id_}`;
 
     return [
-      '<fieldset class="vjs-window-color vjs-track-setting">',
+      '<fieldset class="ovp-window-color ovp-track-setting">',
       `<legend id="${legendId}">`,
       this.localize('Window'),
       '</legend>',
       this.createElSelect_('windowColor', legendId),
-      '<span class="vjs-window-opacity vjs-opacity">',
+      '<span class="ovp-window-opacity ovp-opacity">',
       this.createElSelect_('windowOpacity', legendId),
       '</span>',
       '</fieldset>'
@@ -414,7 +414,7 @@ class TextTrackSettings extends ModalDialog {
    */
   createElColors_() {
     return createEl('div', {
-      className: 'vjs-track-settings-colors',
+      className: 'ovp-track-settings-colors',
       innerHTML: [
         this.createElFgColor_(),
         this.createElBgColor_(),
@@ -433,15 +433,15 @@ class TextTrackSettings extends ModalDialog {
    */
   createElFont_() {
     return createEl('div', {
-      className: 'vjs-track-settings-font',
+      className: 'ovp-track-settings-font',
       innerHTML: [
-        '<fieldset class="vjs-font-percent vjs-track-setting">',
+        '<fieldset class="ovp-font-percent ovp-track-setting">',
         this.createElSelect_('fontPercent', '', 'legend'),
         '</fieldset>',
-        '<fieldset class="vjs-edge-style vjs-track-setting">',
+        '<fieldset class="ovp-edge-style ovp-track-setting">',
         this.createElSelect_('edgeStyle', '', 'legend'),
         '</fieldset>',
-        '<fieldset class="vjs-font-family vjs-track-setting">',
+        '<fieldset class="ovp-font-family ovp-track-setting">',
         this.createElSelect_('fontFamily', '', 'legend'),
         '</fieldset>'
       ].join('')
@@ -460,13 +460,13 @@ class TextTrackSettings extends ModalDialog {
     const defaultsDescription = this.localize('restore all settings to the default values');
 
     return createEl('div', {
-      className: 'vjs-track-settings-controls',
+      className: 'ovp-track-settings-controls',
       innerHTML: [
-        `<button type="button" class="vjs-default-button" title="${defaultsDescription}">`,
+        `<button type="button" class="ovp-default-button" title="${defaultsDescription}">`,
         this.localize('Reset'),
-        `<span class="vjs-control-text"> ${defaultsDescription}</span>`,
+        `<span class="ovp-control-text"> ${defaultsDescription}</span>`,
         '</button>',
-        `<button type="button" class="vjs-done-button">${this.localize('Done')}</button>`
+        `<button type="button" class="ovp-done-button">${this.localize('Done')}</button>`
       ].join('')
     });
   }
@@ -488,7 +488,7 @@ class TextTrackSettings extends ModalDialog {
   }
 
   buildCSSClass() {
-    return super.buildCSSClass() + ' vjs-text-track-settings';
+    return super.buildCSSClass() + ' ovp-text-track-settings';
   }
 
   /**

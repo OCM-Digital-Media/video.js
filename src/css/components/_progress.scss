@@ -1,7 +1,7 @@
-// .vjs-progress-control / ProgressControl
+// .ovp-progress-control / ProgressControl
 //
 // This is the container for all progress bar-related components/elements.
-.video-js .vjs-progress-control {
+.ovp .ovp-progress-control {
   cursor: pointer;
   @include flex(auto);
   @include display-flex(center);
@@ -9,32 +9,32 @@
   touch-action: none;
 }
 
-.video-js .vjs-progress-control.disabled {
+.ovp .ovp-progress-control.disabled {
   cursor: default;
 }
 
-.vjs-live .vjs-progress-control {
+.ovp-live .ovp-progress-control {
   display: none;
 }
 
-.vjs-liveui .vjs-progress-control {
+.ovp-liveui .ovp-progress-control {
   @include display-flex(center);
 }
 
-.vjs-no-flex .vjs-progress-control {
+.ovp-no-flex .ovp-progress-control {
   width: auto;
 }
 
-// .vjs-progress-holder / SeekBar
+// .ovp-progress-holder / SeekBar
 //
 // Box containing play and load progress bars. It also acts as seek scrubber.
-.video-js .vjs-progress-holder {
+.ovp .ovp-progress-holder {
   @include flex(auto);
   @include transition(all 0.2s);
   height: 0.3em;
 }
 
-.video-js .vjs-progress-control .vjs-progress-holder {
+.ovp .ovp-progress-control .ovp-progress-holder {
 
   // This is one of the rare cases where we are using a pixel dimension. The
   // reason is that the progress holder font-size changes on hover. With the
@@ -45,22 +45,22 @@
 
 // This increases the size of the progress holder so there is an increased
 // hit area for clicks/touches.
-.video-js .vjs-progress-control:hover .vjs-progress-holder {
+.ovp .ovp-progress-control:hover .ovp-progress-holder {
   font-size: 1.666666666666666666em;
 }
 
-.video-js .vjs-progress-control:hover .vjs-progress-holder.disabled {
+.ovp .ovp-progress-control:hover .ovp-progress-holder.disabled {
   font-size: 1em;
 }
 
-// .vjs-play-progress / PlayProgressBar and .vjs-load-progress / LoadProgressBar
+// .ovp-play-progress / PlayProgressBar and .ovp-load-progress / LoadProgressBar
 //
 // These are bars that appear within the progress control to communicate the
 // amount of media that has played back and the amount of media that has
 // loaded, respectively.
-.video-js .vjs-progress-holder .vjs-play-progress,
-.video-js .vjs-progress-holder .vjs-load-progress,
-.video-js .vjs-progress-holder .vjs-load-progress div {
+.ovp .ovp-progress-holder .ovp-play-progress,
+.ovp .ovp-progress-holder .ovp-load-progress,
+.ovp .ovp-progress-holder .ovp-load-progress div {
   position: absolute;
   display: block;
   height: 100%;
@@ -70,9 +70,9 @@
   width: 0;
 }
 
-.video-js .vjs-play-progress {
+.ovp .ovp-play-progress {
   background-color: $primary-foreground-color;
-  @extend .vjs-icon-circle;
+  @extend .ovp-icon-circle;
 
   // Progress handle
   &:before {
@@ -84,23 +84,23 @@
   }
 }
 
-.video-js .vjs-load-progress {
+.ovp .ovp-load-progress {
   background: rgba($secondary-background-color, $secondary-background-transparency);
 }
 
 // There are child elements of the load progress bar that represent the
 // specific time ranges that have been buffered.
-.video-js .vjs-load-progress div {
+.ovp .ovp-load-progress div {
   background: rgba($secondary-background-color, 0.75);
 }
 
-// .vjs-time-tooltip
+// .ovp-time-tooltip
 //
 // These elements are displayed above the progress bar.
 //
 // By default, they are hidden and only shown when hovering over the progress
 // control.
-.video-js .vjs-time-tooltip {
+.ovp .ovp-time-tooltip {
   @include background-color-with-alpha(#fff, 0.8);
   @include border-radius(0.3em);
   color: #000;
@@ -113,8 +113,8 @@
   font-family: $text-font-family;
 
   // The font-size should translate to a consistent 10px for time tooltips in
-  // all states. This is tricky because the .vjs-progress-holder element
-  // changes its font-size when the .vjs-progress-control is hovered.
+  // all states. This is tricky because the .ovp-progress-holder element
+  // changes its font-size when the .ovp-progress-control is hovered.
   font-size: 1em;
   padding: 6px 8px 8px 8px;
   pointer-events: none;
@@ -124,12 +124,12 @@
   z-index: 1;
 }
 
-.video-js .vjs-progress-holder:focus .vjs-time-tooltip {
+.ovp .ovp-progress-holder:focus .ovp-time-tooltip {
   display: none;
 }
 
-.video-js .vjs-progress-control:hover .vjs-time-tooltip,
-.video-js .vjs-progress-control:hover .vjs-progress-holder:focus .vjs-time-tooltip {
+.ovp .ovp-progress-control:hover .ovp-time-tooltip,
+.ovp .ovp-progress-control:hover .ovp-progress-holder:focus .ovp-time-tooltip {
   display: block;
 
   // Ensure that we maintain a font-size of ~10px.
@@ -137,15 +137,15 @@
   visibility: visible;
 }
 
-.video-js .vjs-progress-control.disabled:hover .vjs-time-tooltip {
+.ovp .ovp-progress-control.disabled:hover .ovp-time-tooltip {
   font-size: 1em;
 }
 
-// .vjs-mouse-display / MouseTimeDisplay
+// .ovp-mouse-display / MouseTimeDisplay
 //
 // This element tracks the mouse position along the progress control and
 // includes a tooltip, which displays the time at that point in the media.
-.video-js .vjs-progress-control .vjs-mouse-display {
+.ovp .ovp-progress-control .ovp-mouse-display {
   display: none;
   position: absolute;
   width: 1px;
@@ -154,26 +154,26 @@
   z-index: 1;
 }
 
-.vjs-no-flex .vjs-progress-control .vjs-mouse-display {
+.ovp-no-flex .ovp-progress-control .ovp-mouse-display {
   z-index: 0;
 }
 
-.video-js .vjs-progress-control:hover .vjs-mouse-display {
+.ovp .ovp-progress-control:hover .ovp-mouse-display {
   display: block;
 }
 
-.video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display {
+.ovp.ovp-user-inactive .ovp-progress-control .ovp-mouse-display {
   visibility: hidden;
   opacity: 0;
   $trans: visibility 1.0s, opacity 1.0s;
   @include transition($trans);
 }
 
-.video-js.vjs-user-inactive.vjs-no-flex .vjs-progress-control .vjs-mouse-display {
+.ovp.ovp-user-inactive.ovp-no-flex .ovp-progress-control .ovp-mouse-display {
   display: none;
 }
 
-.vjs-mouse-display .vjs-time-tooltip {
+.ovp-mouse-display .ovp-time-tooltip {
   color: #fff;
   @include background-color-with-alpha(#000, 0.8);
 }

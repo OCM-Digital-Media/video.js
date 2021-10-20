@@ -486,7 +486,7 @@ function evented(target, options = {}) {
     }
     target.eventBusEl_ = target[eventBusKey];
   } else {
-    target.eventBusEl_ = Dom.createEl('span', {className: 'vjs-event-bus'});
+    target.eventBusEl_ = Dom.createEl('span', {className: 'ovp-event-bus'});
   }
 
   Obj.assign(target, EventedMixin);

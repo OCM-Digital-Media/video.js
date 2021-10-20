@@ -32,11 +32,11 @@ class SubsCapsButton extends TextTrackButton {
    *         The DOM `className` for this object.
    */
   buildCSSClass() {
-    return `vjs-subs-caps-button ${super.buildCSSClass()}`;
+    return `ovp-subs-caps-button ${super.buildCSSClass()}`;
   }
 
   buildWrapperCSSClass() {
-    return `vjs-subs-caps-button ${super.buildWrapperCSSClass()}`;
+    return `ovp-subs-caps-button ${super.buildWrapperCSSClass()}`;
   }
 
   /**
